@@ -1,0 +1,9 @@
+participant Participant1 as A
+participant Participant2 as B
+
+ref over A, B : diagram1
+
+ref over B
+  diagram2
+  long
+end ref

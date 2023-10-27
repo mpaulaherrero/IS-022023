@@ -1,0 +1,19 @@
+participant Participant1 as A
+participant Participant2 as B
+participant Participant3 as C
+
+A -> B: message1
+
+alt condition
+        B -> A: message2
+
+else else
+        B -> A: message3
+        loop condition
+                A -> B: message4
+        end
+
+        ...delay of x seconds...
+        A -> C : message5
+
+end

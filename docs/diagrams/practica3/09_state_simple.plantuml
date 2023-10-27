@@ -1,0 +1,10 @@
+state State1
+State1 : commentary
+state State2 <<choice>>
+state State3
+
+[*] --> State1
+State1 -> State2 : accion1
+State2 --> [*] : [condicion]
+State2 --> State3 : [falso]
+State3 --> [*] : accion2

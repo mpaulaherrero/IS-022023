@@ -1,0 +1,6 @@
+start
+if (condicion) then (cierto)
+  :Action1;
+  :Action2;
+endif
+stop

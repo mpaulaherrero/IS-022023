@@ -1,0 +1,24 @@
+start
+floating note right
+floating
+
+note
+right
+end note
+
+floating note left
+floating note left
+end note
+
+:Activity;
+note right
+Right note
+end note
+
+:Large
+Activity;
+note left
+Left note
+end note
+
+stop

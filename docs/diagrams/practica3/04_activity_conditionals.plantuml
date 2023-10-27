@@ -1,0 +1,13 @@
+start
+if (condition1) then (cierto)
+  :Action1;
+  :Action2;
+elseif (condition2) then (cierto)
+  :Action3;
+  :Action4;
+  stop
+else (falso)
+  :Action5;
+  :Action6;
+endif
+stop

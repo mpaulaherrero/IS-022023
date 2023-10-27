@@ -1,0 +1,7 @@
+actor Actor
+boundary Boundary
+control Control
+entity Entity
+Actor -> Boundary : message
+Boundary -> Control : message
+Control -> Entity : message

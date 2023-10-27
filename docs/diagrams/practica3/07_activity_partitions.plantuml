@@ -1,0 +1,9 @@
+|Swimlane1|
+start
+:Action1;
+|Swimlane2|
+:Action2;
+:Action3;
+|Swimlane1|
+:Action4;
+stop

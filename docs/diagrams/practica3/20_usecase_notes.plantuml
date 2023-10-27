@@ -1,0 +1,20 @@
+actor Actor
+actor Actor2
+usecase Usecase
+usecase Usecase2
+
+Actor -> Usecase
+Actor --> Usecase2
+
+Actor2 ---> Usecase2
+
+note right of Actor2 : Note.
+
+note right of Usecase2
+  Long
+  note
+end note
+
+note "Long\nnote" as N2
+Usecase .. N2
+N2 .. Usecase2

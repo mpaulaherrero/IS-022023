@@ -1,0 +1,18 @@
+participant Participant1 as A
+participant Participant2 as B
+participant Participant3 as C
+
+create B
+A -> B: new
+activate B
+
+B -> C: message1
+activate B
+activate C
+
+B --> C: delete
+deactivate B
+destroy C
+
+B -> A: message2
+deactivate B

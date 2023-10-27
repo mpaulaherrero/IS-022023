@@ -1,0 +1,4 @@
+[*] -up-> First
+First -right-> Second
+Second -down-> Third
+Third -left-> Last

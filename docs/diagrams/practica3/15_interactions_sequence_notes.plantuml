@@ -1,0 +1,19 @@
+participant Participant1
+participant Participant2
+
+note left of Participant1
+ Note
+ left of Participant1.
+end note
+
+note right of Participant1
+ Note right of Participant1.
+end note
+
+note over Participant1
+ Note over Participant1.
+end note
+
+note over Participant1, Participant2
+ Note over Participant2 and Participant1.
+end note

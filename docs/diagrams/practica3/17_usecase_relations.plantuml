@@ -1,0 +1,9 @@
+actor Actor
+actor :Secondary Actor:
+usecase Usecase1
+usecase Usecase2
+
+Actor -> Usecase1
+Actor ..> Usecase2 : <<Label>>
+
+:Secondary Actor: --> Usecase2 : Long\nlabel

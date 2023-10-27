@@ -1,0 +1,8 @@
+start
+
+while (condicion) is (cierto)
+  :Action1;
+  :Action2;
+endwhile (falso)
+
+stop

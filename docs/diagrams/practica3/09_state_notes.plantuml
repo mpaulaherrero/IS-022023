@@ -1,0 +1,19 @@
+state "CompositeState" as State{
+[*] --> State1
+
+State1 --> State2
+note "This is a floating note" as N1
+note on link
+transition note
+end note
+
+
+note left of State1
+Left note
+end note
+}
+
+note right of State
+This is a note
+on a composite state
+end note

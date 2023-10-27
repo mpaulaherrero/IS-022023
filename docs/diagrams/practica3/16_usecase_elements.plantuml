@@ -1,0 +1,5 @@
+usecase Usecase1
+usecase (Long\nusecase) as U
+
+actor Actor
+actor :Long\nactor: as A

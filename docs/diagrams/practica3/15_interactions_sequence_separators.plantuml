@@ -1,0 +1,9 @@
+== Initialization ==
+
+Participant1 -> Participant2: Message
+Participant2 --> Participant1: Response message
+
+== Repetition ==
+
+Participant1 -> Participant2: Message
+Participant1 <-- Participant2: Response message

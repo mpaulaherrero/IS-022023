@@ -1,0 +1,8 @@
+start
+
+repeat
+  :Action1;
+  :Action2;
+repeat while (condicion) is (cierto)
+
+stop

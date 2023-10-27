@@ -1,0 +1,7 @@
+actor Actor
+actor Actor2
+usecase Usecase
+usecase Usecase2
+
+Actor <|-- Actor2
+Usecase <|-- Usecase2

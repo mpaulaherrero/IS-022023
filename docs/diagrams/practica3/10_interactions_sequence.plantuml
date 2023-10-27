@@ -1,0 +1,10 @@
+participant Participant1
+participant Participant2
+participant "Long\nparticipant" as Long
+
+Participant1 -> Participant2: message1
+Participant1 <-- Participant2: message2
+Participant2 -> Long: message3
+Long --> Participant2 : message4
+Participant2 -> Participant2: long\nmessage
+Participant1 <-- Participant2: message5
