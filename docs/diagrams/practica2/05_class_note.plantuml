@@ -1,32 +1,37 @@
-note as N2
-<del>This</del> is a <color:#midnightblue>floating</color> note
-end note
 note as N1
-This <size:18>note</size>
-is connected
-to <u>several</u>
-===
-* objects
-<img:ok.png{scale=0.2}>
+    Esta <size:18>nota</size> esta conectada
+    a <u>varias</u> clases:
+    * ClaseA
+    * ClaseC
+    y tiene un separador e imagen
+    ===
+    <img:ok.png{scale=0.2}>
 end note
 ClaseA .. N1
 ClaseC .. N1
 class ClaseA
 note left
-<b>Left</b> note
+    Nota a la
+    <b>Izquierda</b>
 end note
 class ClaseB
 note top
-<i>Top</i> note
+    Nota hacia
+    <i>Arriba</i>
 end note
 class ClaseD
 note bottom
-<font color=mediumpurple>Bottom</font> note
+    Nota hacia
+    <font color=mediumpurple>Abajo</font>
 end note
 class ClaseC
 note right
-<u>Right</u> note
+    Nota a la
+    <u>Derecha</u>
 end note
 ClaseA "0..*" - "1..*" ClaseB
 ClaseB "1..*" - "0..*" ClaseD
-(ClaseA,ClaseB) .. ClaseC
+(ClaseA, ClaseB) .. ClaseC
+note as N2
+    <del>Esta</del> es una nota <color:#red>flotante</color>
+end note

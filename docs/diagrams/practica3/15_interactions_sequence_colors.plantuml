@@ -1,0 +1,10 @@
+actor Actor #mediumPurple
+boundary Boundary #hotPink
+control Control #darkGoldenRod
+participant "Participant" as L #lightskyblue
+
+Actor -> Boundary
+Boundary -> Control
+Control -> L
+L -[#darkGoldenRod]-> Control
+Control -[#darkGoldenRod]-> Boundary

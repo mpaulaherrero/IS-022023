@@ -1,0 +1,18 @@
+participant Participant1 as A #lightskyblue
+participant Participant2 as B #lightskyblue
+participant Participant3 as C #lightskyblue
+
+create B
+A -> B: new
+activate B #hotPink
+
+B -> C: message1
+activate B #darkGoldenRod
+activate C #mediumPurple
+
+B --> C: delete
+deactivate B
+destroy C
+
+B -> A: message2
+deactivate B

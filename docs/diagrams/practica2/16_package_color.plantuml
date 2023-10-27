@@ -1,0 +1,10 @@
+package Paquete #turquoise-lemonChiffon{
+    note left of ClaseA #lightskyblue
+        this is my
+        note on this class
+    end note
+
+    class ClaseA #mediumPurple
+    class ClaseB #mediumPurple/HotPink
+}
+ClaseA -[#midnightblue]right->  ClaseB
