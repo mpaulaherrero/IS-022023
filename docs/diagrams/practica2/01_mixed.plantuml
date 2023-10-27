@@ -1,0 +1,11 @@
+allow_mixing
+
+class Clase
+class ClaseLarga as "Clase con nombre\ncon espacios o muy largo"
+abstract class ClaseAbstracta
+interface Interfaz
+enum Enumerado
+annotation Anotacion
+entity Entidad
+boundary boundary
+control control

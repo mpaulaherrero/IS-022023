@@ -1,0 +1,10 @@
+class ClaseA
+class ClaseB
+class ClaseC
+class ClaseD
+class ClaseE
+
+ClaseA "1" .down-> "1..*" ClaseB : rol1
+ClaseA "1" -up-> "*" ClaseC : rol2
+ClaseA "1" -left-> "1" ClaseD : rol3
+ClaseA "1" -right-> "1..*" ClaseE : rol4

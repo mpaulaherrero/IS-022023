@@ -1,0 +1,8 @@
+Component Componente1
+Component Componente2
+Interface InterfazA
+Interface InterfazB
+
+InterfazA - Componente1
+Componente1 ..> InterfazB
+InterfazB - Componente2

@@ -1,0 +1,9 @@
+node nodo1
+node nodo2
+node nodo3
+node nodo4
+node nodo5
+nodo1 -0- nodo2
+nodo1 -0)- nodo3
+nodo1 -(0- nodo4
+nodo1 -(0)- nodo5

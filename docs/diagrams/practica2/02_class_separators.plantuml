@@ -1,0 +1,16 @@
+class Clase {
+atributo1
+metodo1()
+..
+atributo2
+metodo2()
+-- titulo3 --
+atributo3
+metodo3()
+__
+atributo4
+metodo4()
+== titulo4 ==
+atributo5
+metodo5()
+}

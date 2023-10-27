@@ -1,0 +1,12 @@
+Base <|-down- Clase
+Base <|.down. Clase
+Todo *-down-> Clase
+Todo o-down-> Clase
+Usa .down.> Clase
+Asocia -right-> Clase
+Clase -right-> Asociada
+Clase <|-down- Derivada
+Clase <|.down. Derivada
+Clase *-down-> Parte
+Clase o-down-> Parte
+Clase .down.> Usada

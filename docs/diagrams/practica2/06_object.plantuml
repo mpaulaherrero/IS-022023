@@ -1,0 +1,9 @@
+object objeto
+object "objeto largo" as objetoLargo
+object ":Clase" as anonimo
+object " " as undefined
+
+object objetoConEstado {
+  atributo1 = "valor"
+  atributo2 = 123
+}

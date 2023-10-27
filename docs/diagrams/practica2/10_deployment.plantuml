@@ -1,0 +1,3 @@
+node nodo1
+node nodo2
+nodo1 -- nodo2 : label

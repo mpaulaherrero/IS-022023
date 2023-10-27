@@ -1,0 +1,4 @@
+class Origen
+class Destino
+
+Origen "1..*" -right-> "7" Destino : rol >

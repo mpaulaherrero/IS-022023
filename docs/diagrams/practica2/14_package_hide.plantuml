@@ -1,0 +1,15 @@
+package Paquete1 {
+class ClaseA
+class ClaseB
+}
+
+package Paquete2 {
+class ClaseC
+class ClaseD
+}
+
+ClaseA *-- ClaseB
+ClaseC <-- ClaseA
+
+hide Paquete1
+hide ClaseC

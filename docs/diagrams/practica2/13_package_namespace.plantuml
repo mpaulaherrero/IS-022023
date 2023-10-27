@@ -1,0 +1,12 @@
+class ClaseC
+namespace namespace1  {
+.ClaseC <-- ClaseB
+ClaseA o-- ClaseB
+.ClaseC <- ClaseA
+}
+namespace namespace2 {
+namespace1.ClaseB *- ClaseB
+.ClaseC *-- ClaseB
+namespace1.ClaseA o-- ClaseB
+}
+ClaseC <-- namespace3.ClaseB

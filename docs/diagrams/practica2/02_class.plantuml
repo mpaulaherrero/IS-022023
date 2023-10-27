@@ -1,0 +1,19 @@
+class Clase {
+
+tipo atributo
+atributoSinTipo
+{static} atributoEstatico
+- atributoPrivado
+# atributoProtegido
+~ atributoPaquete
++ atrobutoPublico
+
+tipo metodo(tipo parametro) Exception
+{static} metodoEstatico()
+{abstract} metodoAbstracto()
+-metodoPrivado()
+#metodoProtegido()
+~metodoPaquete()
++metodoPublico()
+
+}

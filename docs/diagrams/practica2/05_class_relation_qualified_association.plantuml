@@ -1,0 +1,6 @@
+class Comprador
+class Vendedor
+class CompraVenta
+
+Comprador "0..*" - "1..*" Vendedor
+(Comprador, Vendedor) .. CompraVenta

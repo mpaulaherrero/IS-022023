@@ -1,0 +1,4 @@
+component Componente
+component "Componente Largo" as ComponenteLargo
+interface Interfaz
+interface "Interfaz Larga" as InterfazLarga

@@ -1,0 +1,32 @@
+note as N2
+<del>This</del> is a <color:#midnightblue>floating</color> note
+end note
+note as N1
+This <size:18>note</size>
+is connected
+to <u>several</u>
+===
+* objects
+<img:ok.png{scale=0.2}>
+end note
+ClaseA .. N1
+ClaseC .. N1
+class ClaseA
+note left
+<b>Left</b> note
+end note
+class ClaseB
+note top
+<i>Top</i> note
+end note
+class ClaseD
+note bottom
+<font color=mediumpurple>Bottom</font> note
+end note
+class ClaseC
+note right
+<u>Right</u> note
+end note
+ClaseA "0..*" - "1..*" ClaseB
+ClaseB "1..*" - "0..*" ClaseD
+(ClaseA,ClaseB) .. ClaseC

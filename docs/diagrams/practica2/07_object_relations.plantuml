@@ -1,0 +1,12 @@
+object objeto1 {
+  atributo = valor
+}
+object objeto2
+object objeto3
+object objeto4
+object objeto5
+
+objeto1 *-down-> objeto2 : parte
+objeto1 o-down-> objeto3 : agregado
+objeto1 -right-> objeto4 : asociado
+objeto1 .left.> objeto5 : usado
