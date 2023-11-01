@@ -1,17 +1,17 @@
 skinparam handwritten true
 
 skinparam usecase {
-BackgroundColor DarkSeaGreen
-BorderColor DarkSlateGray
+    BackgroundColor DarkSeaGreen
+    BorderColor DarkSlateGray
 
-BackgroundColor<< Main >> YellowGreen
-BorderColor<< Main >> YellowGreen
+    BackgroundColor<< Main >> YellowGreen
+    BorderColor<< Main >> YellowGreen
 
-ArrowColor Olive
-ActorBorderColor black
-ActorFontName Courier
+    ArrowColor Olive
+    ActorBorderColor black
+    ActorFontName Courier
 
-ActorBackgroundColor<< Human >> Gold
+    ActorBackgroundColor<< Human >> Gold
 }
 
 Actor << Human >>
