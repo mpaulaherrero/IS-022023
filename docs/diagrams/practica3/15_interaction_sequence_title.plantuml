@@ -1,0 +1,27 @@
+@startuml "titleExample"
+skinparam title {
+    BorderRoundCorner 15
+    BorderThickness 2
+    BorderColor red
+    BackgroundColor Aqua-CadetBlue
+}
+
+title Titulo\nen 2 líneas
+
+header
+    <font color=Aqua>IS</font>
+   Ejemplo de encabezado
+endheader
+
+Alicia -> Juan: saluda()
+Juan --> Alicia: Hola
+
+caption Figura 1
+
+
+legend top left
+    Leyenda
+end legend
+
+center footer Ejemplo de pie de página centrado
+@enduml

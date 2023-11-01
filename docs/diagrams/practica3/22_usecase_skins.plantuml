@@ -1,3 +1,4 @@
+@startuml "usecasSkins"
 skinparam handwritten true
 
 skinparam usecase {
@@ -23,3 +24,4 @@ Actor -> (Start)
 Actor --> (Use)
 
 MySql --> (Use)
+@enduml
