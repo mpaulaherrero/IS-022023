@@ -1,0 +1,47 @@
+@startuml "diagramaColaboracion"
+
+skinparam noteBackgroundColor transparent
+skinparam noteBorderColor transparent
+hide members
+
+object ": User" as user
+object ": StartView" as startView
+object ": StartController" as startController
+object ": Game" as game
+object ": GameView" as gameView
+
+user --> startView
+note on link
+    1: start()
+    2: insertNumPlayers()
+    3: insertDifficulty()
+end note
+
+startView --> startView
+note on link
+    4: readNumPlayers()
+    5: readDifficulty()
+end note
+
+startView --> startController
+note on link
+    6: setupGame(int, int)
+end note
+
+startController --> game
+note on link
+    7: new()
+    8: setupGame(int, int)
+    9: getGameDTO()
+end note
+
+startView --> gameView
+note on link
+    10: write()
+end note
+
+gameView --> startController
+note on link
+    11: getGameDTO()
+end note
+@enduml

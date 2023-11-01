@@ -1,0 +1,29 @@
+@startuml "diagramaColaboracion"
+
+skinparam noteBackgroundColor transparent
+skinparam noteBorderColor transparent
+hide members
+
+object ": Actor" as user
+object ": EngargadoPedido" as engargadoPedido
+object ": BBDDEntradas" as bbdd
+object ": OficinaCredito" as oficinaCredito
+
+user -r-> engargadoPedido
+note on link
+    pedir(pedido, cliente)
+end note
+
+engargadoPedido -r-> bbdd
+note on link
+    2: coste = reservar(pedido)
+end note
+
+engargadoPedido -d-> oficinaCredito
+note on link
+    1: comprobarCredito(cliente)
+
+    3: cargarCuenta(cliente, coste)
+end note
+
+@enduml
