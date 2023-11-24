@@ -1,3 +1,36 @@
-@startuml
-:Personal de recepción: --> (CU1-Recibir vehículo) :Personal de recepción: --> (CU5-Entrega vehículo) :Personal de recepción: --> (CU8-Login)
+@startuml taller_usecases
+left to right direction
+
+actor "Personal de recepción" as Recepcion
+actor "Mecánico" as Mecanico
+actor "Jefe de taller" as Jefe
+actor "Gerente del taller" as Gerente
+actor "Administrador" as Admin
+actor "Usuario" as Usuario
+
+Gerente -l-|> Admin
+Jefe -l-|> Admin
+Admin -l-|> Usuario
+Recepcion -l-|> Usuario
+Mecanico -l-|> Usuario
+
+rectangle TallerMecanico {
+  package "Administrar reporte"
+  package "Administrar reparación"
+  package "Administrar factura"
+  package "Administrar personal"
+  package "Administrar bono"
+  package "Administrar usuarios"
+  usecase "Iniciar Sesión" as CU7
+  usecase "Cerrar Sesión" as CU8
+}
+
+Recepcion -- "Administrar reporte"
+Mecanico -- "Administrar reparación"
+Gerente -- "Administrar factura"
+Gerente -- "Administrar personal"
+Jefe -- "Administrar bono"
+Admin -- "Administrar usuarios"
+Usuario -- CU7
+Usuario -- CU8
 @enduml
