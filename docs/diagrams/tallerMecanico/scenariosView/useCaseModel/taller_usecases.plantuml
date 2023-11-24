@@ -1,0 +1,3 @@
+@startuml
+:Personal de recepción: --> (CU1-Recibir vehículo) :Personal de recepción: --> (CU5-Entrega vehículo) :Personal de recepción: --> (CU8-Login)
+@enduml
