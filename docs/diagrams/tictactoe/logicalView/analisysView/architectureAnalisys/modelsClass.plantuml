@@ -1,0 +1,20 @@
+@startuml modelsClass
+control hola
+
+entity  Game
+entity  Board
+entity  Player
+entity  Turn
+entity  Coordinate
+entity  Color
+
+
+Game -d- Turn
+Turn -r- Player
+Player -r- Board
+Board -- Coordinate
+Board -- Color
+
+hide hola
+
+@enduml

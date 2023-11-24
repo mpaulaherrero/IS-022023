@@ -1,0 +1,13 @@
+@startuml packages
+
+package controllers { }
+package models  { }
+package types  { }
+package views { }
+
+views .down.> controllers
+views .down.> types
+controllers .down.> models
+models .down.> types
+
+@enduml

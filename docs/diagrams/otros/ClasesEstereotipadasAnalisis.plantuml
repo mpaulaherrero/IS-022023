@@ -1,0 +1,9 @@
+@startuml
+boundary Vista
+control Control
+entity Entidad
+
+Vista "1..*" -right-> "7" Control : rol >
+Control -- Entidad
+
+@enduml
