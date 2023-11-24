@@ -1,0 +1,28 @@
+@startuml mastermind_propose_secuence
+participant BreakerPlayer as ":BreakerPlayer" order 10
+participant MakerPlayer as ":MakerPlayer" order 20
+participant ProposedCombination as ":ProposedCombination" order 30
+participant SecretCombination as ":SecretCombination" order 40
+participant result as "result:Result" order 50
+
+loop result.blacks < 4 && attempts < 10
+    BreakerPlayer -> BreakerPlayer: propose a combination
+    BreakerPlayer -> MakerPlayer: set result
+    loop 4
+        MakerPlayer -> ProposedCombination: get color
+        ProposedCombination --> MakerPlayer: proposed color
+        loop 4
+            MakerPlayer -> SecretCombination: get color
+            SecretCombination --> MakerPlayer: secret color
+            alt proposed color = secret color
+                alt colors in same position
+                    MakerPlayer -> result: put black
+                else
+                    MakerPlayer -> result: put white
+                end
+            end
+        end
+    end
+    MakerPlayer --> BreakerPlayer: result
+end
+@enduml
