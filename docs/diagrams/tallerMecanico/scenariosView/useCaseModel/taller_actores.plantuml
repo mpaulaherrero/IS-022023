@@ -1,0 +1,16 @@
+@startuml taller_actores
+
+actor "Personal Receptor" as Recepcion
+actor "Mecánico" as Mecanico
+actor "Jefe Taller" as Jefe
+actor "Gerente Taller" as Gerente
+actor "Administrador" as Admin
+actor "Usuario" as Usuario
+
+Gerente -u-|> Admin
+Jefe -u-|> Admin
+Admin -u-|> Usuario
+Recepcion -u-|> Usuario
+Mecanico -u-|> Usuario
+
+@enduml

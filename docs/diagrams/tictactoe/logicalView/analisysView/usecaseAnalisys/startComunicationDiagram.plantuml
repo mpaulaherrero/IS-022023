@@ -1,0 +1,63 @@
+@startuml startComunicationDiagram
+skinparam EntityBackgroundColor white
+skinparam BoundaryBackgroundColor white
+skinparam ControlBackgroundColor white
+skinparam ActorBackgroundColor white
+skinparam noteBackgroundColor transparent
+skinparam noteBorderColor transparent
+hide members
+
+actor Player
+
+control ":StartController" as StartController
+
+entity ":Board" as Board
+entity ":Game" as Game
+
+boundary ":BoardView" as BoardView
+boundary ":StartView" as StartView
+boundary ":ColorView" as ColorView
+boundary ":Message" as Message
+
+
+Player -r-> StartView
+note on link
+    start()
+end note
+
+StartView -r-> Message
+note on link
+    write()
+end note
+
+StartView -r-> BoardView
+note on link
+    write(startController)
+end note
+
+BoardView --> ColorView
+note on link
+    write(color)
+end note
+
+BoardView --> Message
+note on link
+    write()
+end note
+
+BoardView -r-> StartController
+note on link
+    getColor(coordinate)
+end note
+
+StartController --> Game
+note on link
+    getColor(coordinate)
+end note
+
+Game --> Board
+note on link
+    getColor(coordinate)
+end note
+
+@enduml

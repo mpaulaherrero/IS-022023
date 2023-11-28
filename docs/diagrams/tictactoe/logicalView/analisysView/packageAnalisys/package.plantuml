@@ -1,4 +1,5 @@
 @startuml packages
+skinparam PackageBackgroundColor white
 
 package controllers { }
 package models  { }

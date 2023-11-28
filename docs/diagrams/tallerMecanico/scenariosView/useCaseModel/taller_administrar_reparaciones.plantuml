@@ -1,0 +1,28 @@
+@startuml taller_administrar_reparaciones
+left to right direction
+
+actor "Mecánico" as Mecanico
+
+package "Administrar reparaciones" {
+    usecase "Agregar reparación" as CU7
+    usecase "Eliminar reparación" as CU8
+    usecase "Modificar reparación" as CU9
+    usecase "Consultar reparaciones" as CU30
+    usecase "Agregar repuesto" as CU38
+    usecase "Eliminar repuesto" as CU39
+    usecase "Modificar repuesto" as CU40
+    usecase "Consultar repuestos" as CU41
+
+}
+
+Mecanico -- CU7
+Mecanico -- CU8
+Mecanico -- CU9
+Mecanico -- CU30
+Mecanico -- CU38
+Mecanico -- CU39
+Mecanico -- CU40
+Mecanico -- CU41
+
+
+@enduml

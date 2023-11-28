@@ -1,0 +1,37 @@
+@startuml startClassDiagram
+skinparam EntityBackgroundColor white
+skinparam BoundaryBackgroundColor white
+skinparam ControlBackgroundColor white
+skinparam ActorBackgroundColor white
+
+actor Player
+
+control StartController
+
+entity Board
+entity Game
+
+entity Coordinate
+entity Color
+
+boundary BoardView
+boundary StartView
+boundary ColorView
+boundary Message
+
+
+Player -r- StartView
+StartView -r- Message
+StartView -r- BoardView
+BoardView -- ColorView
+BoardView -- Message
+BoardView -- Coordinate
+ColorView -- Color
+BoardView -r- StartController
+StartController -r- Game
+StartController -- Coordinate
+Game -- Board
+Game -- Coordinate
+Board -r- Coordinate
+Board -- Color
+@enduml

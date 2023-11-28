@@ -1,0 +1,28 @@
+@startuml taller_administrar_empleados
+left to right direction
+
+actor "Jefe Taller" as Jefe
+
+  package "Administrar Empleados" {
+    usecase "Registrar Empleado" as CU15
+    usecase "Consultar Empleados" as CU16
+    usecase "Eliminar Empleado" as CU17
+    usecase "Modificar Empleado" as CU18
+
+    usecase "Generar bono" as CU19
+    usecase "Modificar bono" as CU20
+    usecase "Eliminar bono" as CU21
+    usecase "Consultar bonos" as CU22
+  }
+
+Jefe -- CU15
+Jefe -- CU16
+Jefe -- CU17
+Jefe -- CU18
+
+Jefe -- CU19
+Jefe -- CU20
+Jefe -- CU21
+Jefe -- CU22
+
+@enduml

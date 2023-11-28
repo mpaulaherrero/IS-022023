@@ -15,115 +15,21 @@ Recepcion -l-|> Usuario
 Mecanico -l-|> Usuario
 
 rectangle "Taller Mecánico" {
-  package "Administrar Reportes" {
-    usecase "Registrar reporte" as CU1
-    usecase "Consultar reportes" as CU2
-    usecase "Eliminar reporte" as CU3
-    usecase "Modificar reporte" as CU4
-    usecase "Cerrar reporte" as CU5
-    usecase "Consultar vehículo" as CU6
-    usecase "Agregar vehículo" as CU31
-    usecase "Modificar vehículo" as CU32
-    usecase "Eliminar vehículo" as CU33
-    usecase "Crear cliente" as CU34
-    usecase "Eliminar cliente" as CU35
-    usecase "Buscar cliente" as CU36
-    usecase "Modificar cliente" as CU37
-  }
-
-  package "Administrar reparaciones" {
-    usecase "Agregar reparación" as CU7
-    usecase "Eliminar reparación" as CU8
-    usecase "Modificar reparación" as CU9
-    usecase "Consultar reparaciones" as CU30
-    usecase "Agregar repuesto" as CU38
-    usecase "Eliminar repuesto" as CU39
-    usecase "Modificar repuesto" as CU40
-    usecase "Consultar repuestos" as CU41
-
-  }
-
-  package "Administrar Facturas" {
-    usecase "Crear factura" as CU10
-    usecase "Modificar factura" as CU11
-    usecase "Consultar facturas" as CU12
-    usecase "Eliminar factura" as CU13
-    usecase "Generar factura" as CU14
-  }
-
-  package "Administrar Empleados" {
-    usecase "Registrar Empleado" as CU15
-    usecase "Consultar Empleados" as CU16
-    usecase "Eliminar Empleado" as CU17
-    usecase "Modificar Empleado" as CU18
-
-    usecase "Generar bono" as CU19
-    usecase "Modificar bono" as CU20
-    usecase "Eliminar bono" as CU21
-    usecase "Consultar bonos" as CU22
-  }
-
-  package "Administrar Usuarios" {
-    usecase "Crear usuario" as CU23
-    usecase "Eliminar usuario" as CU24
-    usecase "Buscar usuarios" as CU25
-    usecase "Modificar usuario" as CU26
-  }
-
-  package "Administrar Seguridad" {
-    usecase "Iniciar Sesión" as CU27
-    usecase "Cerrar Sesión" as CU28
-    usecase "Cambiar Contraseña" as CU29
-  }
+  package "Administrar Reportes"
+  package "Administrar reparaciones"
+  package "Administrar Facturas"
+  package "Administrar Empleados"
+  package "Administrar Usuarios"
+  package "Administrar Seguridad"
 }
 
-Recepcion -- CU1
-Recepcion -- CU2
-Recepcion -- CU3
-Recepcion -- CU4
-Recepcion -- CU5
-Recepcion -- CU6
-Recepcion -- CU31
-Recepcion -- CU32
-Recepcion -- CU33
-Recepcion -- CU34
-Recepcion -- CU35
-Recepcion -- CU36
-Recepcion -- CU37
-
-Mecanico -- CU2
-Mecanico -- CU7
-Mecanico -- CU8
-Mecanico -- CU9
-Mecanico -- CU30
-Mecanico -- CU38
-Mecanico -- CU39
-Mecanico -- CU40
-Mecanico -- CU41
-
-Gerente -- CU10
-Gerente -- CU11
-Gerente -- CU12
-Gerente -- CU13
-Gerente -- CU14
-
-Jefe -- CU15
-Jefe -- CU16
-Jefe -- CU17
-Jefe -- CU18
-
-Jefe -- CU19
-Jefe -- CU20
-Jefe -- CU21
-Jefe -- CU22
-
-Admin -- CU23
-Admin -- CU24
-Admin -- CU25
-Admin -- CU26
-
-Usuario -- CU27
-Usuario -- CU28
-Usuario -- CU29
+Recepcion -- "Administrar Reportes"
+Mecanico -- "Administrar Reportes"
+Mecanico -- "Administrar reparaciones"
+Gerente -- "Administrar Facturas"
+Gerente -- "Administrar Reportes"
+Jefe -- "Administrar Empleados"
+Admin -- "Administrar Usuarios"
+Usuario -- "Administrar Seguridad"
 
 @enduml

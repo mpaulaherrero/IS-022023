@@ -1,4 +1,8 @@
 @startuml modelsClass
+skinparam EntityBackgroundColor white
+skinparam BoundaryBackgroundColor white
+skinparam ControlBackgroundColor white
+
 control hola
 
 entity  Game

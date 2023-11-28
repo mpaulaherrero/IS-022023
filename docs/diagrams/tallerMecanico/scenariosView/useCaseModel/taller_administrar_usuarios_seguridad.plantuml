@@ -1,0 +1,29 @@
+@startuml taller_administrar_usuarios_seguridad
+left to right direction
+
+actor "Administrador" as Admin
+actor "Usuario" as Usuario
+Admin -l-|> Usuario
+
+package "Administrar Usuarios" {
+    usecase "Crear usuario" as CU23
+    usecase "Eliminar usuario" as CU24
+    usecase "Buscar usuarios" as CU25
+    usecase "Modificar usuario" as CU26
+}
+
+package "Administrar Seguridad" {
+    usecase "Iniciar Sesión" as CU27
+    usecase "Cerrar Sesión" as CU28
+    usecase "Cambiar Contraseña" as CU29
+}
+
+Admin -- CU23
+Admin -- CU24
+Admin -- CU25
+Admin -- CU26
+
+Usuario -- CU27
+Usuario -- CU28
+Usuario -- CU29
+@enduml

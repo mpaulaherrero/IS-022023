@@ -1,0 +1,45 @@
+@startuml taller_administrar_reportes
+left to right direction
+
+actor "Personal Receptor" as Recepcion
+actor "Mecánico" as Mecanico
+actor "Gerente Taller" as Gerente
+
+package "Administrar Reportes" {
+    usecase "Registrar reporte" as CU1
+    usecase "Consultar reportes" as CU2
+    usecase "Eliminar reporte" as CU3
+    usecase "Modificar reporte" as CU4
+    usecase "Cerrar reporte" as CU5
+    usecase "Consultar vehículo" as CU6
+    usecase "Agregar vehículo" as CU31
+    usecase "Modificar vehículo" as CU32
+    usecase "Eliminar vehículo" as CU33
+    usecase "Crear cliente" as CU34
+    usecase "Eliminar cliente" as CU35
+    usecase "Buscar cliente" as CU36
+    usecase "Modificar cliente" as CU37
+}
+
+Mecanico -u- CU2
+
+Recepcion -- CU1
+Recepcion -- CU2
+Recepcion -- CU3
+Recepcion -- CU4
+Recepcion -- CU5
+Recepcion -- CU6
+Recepcion -- CU31
+Recepcion -- CU32
+Recepcion -- CU33
+Recepcion -- CU34
+Recepcion -- CU35
+Recepcion -- CU36
+Recepcion -- CU37
+
+Gerente -u- CU34
+Gerente -u- CU35
+Gerente -u- CU36
+Gerente -u- CU37
+
+@enduml

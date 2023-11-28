@@ -1,0 +1,20 @@
+@startuml taller_administrar_facturas
+left to right direction
+
+actor "Gerente Taller" as Gerente
+
+package "Administrar Facturas" {
+    usecase "Crear factura" as CU10
+    usecase "Modificar factura" as CU11
+    usecase "Consultar facturas" as CU12
+    usecase "Eliminar factura" as CU13
+    usecase "Generar factura" as CU14
+}
+
+Gerente -- CU10
+Gerente -- CU11
+Gerente -- CU12
+Gerente -- CU13
+Gerente -- CU14
+
+@enduml
