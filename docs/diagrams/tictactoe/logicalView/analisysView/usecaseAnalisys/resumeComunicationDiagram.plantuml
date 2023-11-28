@@ -1,0 +1,60 @@
+@startuml resumeComunicationDiagram
+skinparam EntityBackgroundColor white
+skinparam BoundaryBackgroundColor white
+skinparam ControlBackgroundColor white
+skinparam ActorBackgroundColor white
+skinparam noteBackgroundColor transparent
+skinparam noteBorderColor transparent
+
+
+actor "Player" as Playerr
+
+control ":ResumeController" as ResumeController
+
+entity ":Board" as Board
+entity ":Game" as Game
+entity ":Turn" as Turn
+entity ":Player" as Player
+
+entity ":Coordinate" as Coordinate
+entity ":Color" as Color
+
+boundary ResumeView
+boundary Message
+
+Playerr -r-> ResumeView
+note on link
+    resume()
+end note
+ResumeView -r-> ResumeController
+note on link
+    reset()
+end note
+ResumeView ..> Message
+note on link
+    write()
+end note
+ResumeController -r-> Game
+note on link
+    reset()
+end note
+ResumeController ..> Coordinate
+Game -r-> Turn
+note on link
+    reset()
+end note
+Game -down-> Board
+note on link
+    reset()
+end note
+Board ..> Coordinate
+Board -> Color
+Game ..> Coordinate
+Player ..> Coordinate
+Player --> Board
+Player --> Color
+Turn -r-> Player
+note on link
+    new()
+end note
+@enduml

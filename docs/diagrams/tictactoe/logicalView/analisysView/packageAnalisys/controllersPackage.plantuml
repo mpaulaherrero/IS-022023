@@ -1,0 +1,16 @@
+@startuml controllersPackage
+skinparam ClassBackgroundColor white
+skinparam classAttributeIconSize 0
+hide circle
+skinparam PackageBackgroundColor white
+
+abstract class  controllers.Controller
+class  controllers.PlayController
+class  controllers.ResumeController
+class  controllers.StartController
+
+controllers.Controller <|-- controllers.StartController
+controllers.Controller <|-- controllers.PlayController
+controllers.Controller <|-- controllers.ResumeController
+
+@enduml

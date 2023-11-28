@@ -1,0 +1,32 @@
+@startuml viewsPackage
+skinparam ClassBackgroundColor white
+skinparam classAttributeIconSize 0
+hide circle
+skinparam PackageBackgroundColor white
+
+class  views.BoardView
+class  views.ErrorView
+class  views.PlayView
+class  views.ResumeView
+class views.StartView
+class  views.MovementView
+class  views.ColorView
+enum  views.Message
+class  views.PlayerView
+class views.CoordinateView
+
+views.PlayerView *-down-> views.StartView
+views.PlayerView *-down-> views.PlayView
+views.PlayerView *-down-> views.ResumeView
+views.StartView ..> views.Message
+views.StartView ..> views.BoardView
+views.BoardView ..> views.ColorView
+views.BoardView ..> views.Message
+views.PlayView ..> views.Message
+views.PlayView ..> views.BoardView
+views.PlayView ..> views.MovementView
+views.MovementView ..> views.ErrorView
+views.ResumeView ..> views.Message
+views.MovementView ..> views.CoordinateView
+
+@enduml

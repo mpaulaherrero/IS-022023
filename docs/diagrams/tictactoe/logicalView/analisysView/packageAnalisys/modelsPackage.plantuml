@@ -1,0 +1,17 @@
+@startuml modelsPackage
+skinparam ClassBackgroundColor white
+skinparam classAttributeIconSize 0
+hide circle
+skinparam PackageBackgroundColor white
+
+class  models.Board
+class  models.Game
+class  models.Player
+class  models.Turn
+
+models.Game *-down-> models.Turn
+models.Game *-down-> models.Board
+models.Turn *-down-> models.Player
+models.Player --> models.Board
+
+@enduml

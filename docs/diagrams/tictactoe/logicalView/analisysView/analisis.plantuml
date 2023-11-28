@@ -112,8 +112,6 @@ controllers.Controller <|-- controllers.StartController
 controllers.Controller <|-- controllers.PlayController
 controllers.Controller <|-- controllers.ResumeController
 
-
-
 models.Game *-down-> models.Turn
 models.Game *-down-> models.Board
 models.Turn *-down-> models.Player

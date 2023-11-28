@@ -1,0 +1,43 @@
+@startuml resumeClassDiagram
+skinparam EntityBackgroundColor white
+skinparam BoundaryBackgroundColor white
+skinparam ControlBackgroundColor white
+skinparam ActorBackgroundColor white
+
+actor "Player" as Playerr
+
+control ResumeController
+
+entity Board
+entity Game
+entity Turn
+entity Player
+
+entity Coordinate
+entity Color
+
+boundary ResumeView
+boundary Message
+
+Playerr -r- ResumeView
+
+ResumeView -r- ResumeController
+ResumeView .. Message
+
+ResumeController -r- Game
+ResumeController .. Coordinate
+
+Game -r- Turn
+Game -down- Board
+Game -- Coordinate
+
+Board .. Coordinate
+Board -- Color
+
+Player .. Coordinate
+Player -- Board
+Player -- Color
+
+Turn -r- Player
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml typesPackage
+skinparam ClassBackgroundColor white
+skinparam classAttributeIconSize 0
+hide circle
+skinparam PackageBackgroundColor white
+
+class  types.Coordinate
+
+enum  types.Color
+enum  types.Error
+
+@enduml
