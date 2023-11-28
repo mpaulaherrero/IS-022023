@@ -3,12 +3,12 @@ skinparam ClassBackgroundColor white
 skinparam classAttributeIconSize 0
 hide circle
 
-class Coordinate as "Coordinate"
-enum Error as "Error"
-enum Color as "Color"
-class StartController as "StartController"
-class PlayController as "PlayController"
-class ResumeController as "ResumeController"
+class Coordinate
+enum Error
+enum Color
+class StartController
+class PlayController
+class ResumeController
 
 class  BoardView{
     + write(StartController)
@@ -39,18 +39,18 @@ class  ColorView{
 }
 
 enum  Message{
-    - TITLE
-    - HORIZONTAL_LINE
-    - VERTICAL_LINE
-    - ACTION_COMMAND
-    - UNDO_COMMAND
-    - REDO_COMMAND
-    - ENTER_COORDINATE_TO_PUT
-    - COORDINATE_TO_PUT
-    - COORDINATE_TO_REMOVE
-    - COORDINATE_TO_MOVE
-    - PLAYER_WIN
-    - RESUME
+    + TITLE
+    + HORIZONTAL_LINE
+    + VERTICAL_LINE
+    + ACTION_COMMAND
+    + UNDO_COMMAND
+    + REDO_COMMAND
+    + ENTER_COORDINATE_TO_PUT
+    + COORDINATE_TO_PUT
+    + COORDINATE_TO_REMOVE
+    + COORDINATE_TO_MOVE
+    + PLAYER_WIN
+    + RESUME
     + writeln()
     + write()
 }

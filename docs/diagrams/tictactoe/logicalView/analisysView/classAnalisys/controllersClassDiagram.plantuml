@@ -1,40 +1,44 @@
 @startuml controllersClassDiagram
-class Coordinate as "types.\nCoordinate"
-enum Color as "types.\nColor"
-enum Error as "types.\nError"
-class Game as "models.\nGame"
+skinparam ClassBackgroundColor white
+skinparam classAttributeIconSize 0
+hide circle
 
-abstract class  controllers.Controller{
+class Coordinate
+enum Color
+enum Error
+class Game
+
+abstract class  Controller{
     + getColor(Coordinate): Color
 }
 
-class  controllers.PlayController{
-    +areAllTokensOnBoard(): boolean
-    +putToken(Coordinate)
-    +getPutTokenError(Coordinate): Error
-    +moveToken(Coordinate, Coordinate)
-    +getOriginMoveTokenError(Coordinate): Error
-    +getTargetMoveTokenError(Coordinate, Coordinate): Error
-    +next()
-    +getActiveColor(): Color
-    +isTicTacToe(): boolean
+class  PlayController{
+    + areAllTokensOnBoard(): boolean
+    + putToken(Coordinate)
+    + getPutTokenError(Coordinate): Error
+    + moveToken(Coordinate, Coordinate)
+    + getOriginMoveTokenError(Coordinate): Error
+    + getTargetMoveTokenError(Coordinate, Coordinate): Error
+    + next()
+    + getActiveColor(): Color
+    + isTicTacToe(): boolean
 }
 
-class  controllers.ResumeController{
-    +reset()
+class  ResumeController{
+    + reset()
 }
 
-class  controllers.StartController{
+class  StartController{
 
 }
 
 
-controllers.Controller <|-- controllers.StartController
-controllers.Controller <|-- controllers.PlayController
-controllers.Controller <|-- controllers.ResumeController
+Controller <|-- StartController
+Controller <|-- PlayController
+Controller <|-- ResumeController
 
-controllers.Controller .down.> Coordinate
-controllers.Controller --> Game
-controllers.Controller ..> Color
-controllers.PlayController .down.> Error
+Controller .l.> Coordinate
+Controller -r-> Game
+Controller .l.> Color
+PlayController .down.> Error
 @enduml
