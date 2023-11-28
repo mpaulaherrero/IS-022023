@@ -1,0 +1,40 @@
+@startuml controllersClassDiagram
+class Coordinate as "types.\nCoordinate"
+enum Color as "types.\nColor"
+enum Error as "types.\nError"
+class Game as "models.\nGame"
+
+abstract class  controllers.Controller{
+    + getColor(Coordinate): Color
+}
+
+class  controllers.PlayController{
+    +areAllTokensOnBoard(): boolean
+    +putToken(Coordinate)
+    +getPutTokenError(Coordinate): Error
+    +moveToken(Coordinate, Coordinate)
+    +getOriginMoveTokenError(Coordinate): Error
+    +getTargetMoveTokenError(Coordinate, Coordinate): Error
+    +next()
+    +getActiveColor(): Color
+    +isTicTacToe(): boolean
+}
+
+class  controllers.ResumeController{
+    +reset()
+}
+
+class  controllers.StartController{
+
+}
+
+
+controllers.Controller <|-- controllers.StartController
+controllers.Controller <|-- controllers.PlayController
+controllers.Controller <|-- controllers.ResumeController
+
+controllers.Controller .down.> Coordinate
+controllers.Controller --> Game
+controllers.Controller ..> Color
+controllers.PlayController .down.> Error
+@enduml
