@@ -1,20 +1,9 @@
 @startuml "diagramaColaboracion"
 
-skinparam noteBackgroundColor transparent
-skinparam noteBorderColor transparent
-hide members
-
 object "nombre objeto: Clase" as objeto1
 object ": Clase" as objeto2
 
-objeto1 -d--> objeto2
-note on link
-    1: mensaje()
-end note
-
-objeto2 -u-> objeto1
-note on link
-    2: otroMensaje()
-end note
+objeto1 -d- objeto2 : 1: mensaje() >
+objeto2 -u- objeto1 : 2: otroMensaje() >
 
 @enduml
