@@ -9,6 +9,6 @@ user -r- engargadoPedido: pedir(pedido, cliente) >
 
 engargadoPedido -r- bbdd: 2: coste = reservar(pedido) >
 
-engargadoPedido -d-> oficinaCredito: >  1: comprobarCredito(cliente) \n 3: cargarCuenta(cliente, coste) >
+engargadoPedido -d- oficinaCredito: >  1: comprobarCredito(cliente) \n 3: cargarCuenta(cliente, coste) >
 
 @enduml
