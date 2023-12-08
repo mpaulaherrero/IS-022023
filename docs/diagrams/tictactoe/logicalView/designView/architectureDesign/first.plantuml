@@ -1,0 +1,14 @@
+@startuml diseño_la_arquitectura
+skinparam ComponentBackgroundColor white
+
+node node #DDDDDD [
+<b>Personal Computer</b>
+----
+
+]
+
+[ tictactoe.jar ] as component
+
+node *--> component
+
+@enduml
