@@ -59,12 +59,6 @@ Los prototipos de las pantallas las podrá ver en: [prototipo de pantallas](scen
 ![Diagrama de colaboración de análisis de UC2](logicalView/analisysView/usecaseAnalisys/analysisComunicationDiagramUC2/analysisComunicationDiagramUC2.svg)
 
 ### Diagrama de clases de análisis
-![diagrama de clases de análisis usuario administrador](logicalView/analisysView/classAnalisys/analysisClassDiagramAdminUser/analysisClassDiagramAdminUser.svg)
 
 ### Arquitectura de análisis
-![arquitectura de análisis](logicalView/analisysView/architectureAnalisys/analysisPackageDiagram/analysisPackageDiagram.svg)
 
-## Modelo de Diseño
-
-### Arquitectura de Sistema
-![arquitectura de sistema de Framework Express](logicalView/designView/express/architectureDesign/componentDiagram/architecture_design.svg)
