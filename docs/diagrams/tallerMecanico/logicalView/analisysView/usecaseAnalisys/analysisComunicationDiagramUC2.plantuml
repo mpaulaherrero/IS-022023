@@ -1,0 +1,28 @@
+@startuml
+left to right direction
+
+object ": Mechanic" as Mechanic
+object ": Reports\nView" as ReportsView
+object ": ShowReports\nController" as ShowReportsController
+object ": EditReport\nView" as EditReportView
+object ": SetRepairs\nController" as SetRepairsController
+object ": Report" as Report
+object ": Repair" as Repair
+object ": SparePart" as SparePart
+object ": Client" as Client
+object ": Vehicle" as Vehicle
+object ": Employee" as Employee
+
+Mechanic -- ReportsView : > 1: getReports()
+ReportsView -- ShowReportsController : > 2: getReports()
+ShowReportsController -- Report : > 3: getData()
+
+Mechanic -- EditReportView : > 4: setRepair(reportID, date, time, \nhoursWorked, description) \n 8: setSparePart(reportID, sparePartCode)
+EditReportView -- SetRepairsController : > 5: setRepair(reportID, repairData) \n 9: setSparePart(reportID, sparePartCode) \n 7: showResult() <
+SetRepairsController -- Report : > 6: setRepair(repairData) \n 10: setSpareParte(sparePartCode)
+Report -- Repair
+Report -- SparePart
+Report -- Client
+Report -- Vehicle
+Report -- Employee
+@enduml

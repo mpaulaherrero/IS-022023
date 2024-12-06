@@ -1,0 +1,23 @@
+@startuml
+object ": Receiver" as Receiver
+object ": NewReport\nView" as NewReportView
+object ": Client" as Client
+object ": Vehicle" as Vehicle
+object ": Report" as Report
+object ": Employee" as Employee
+object ": PreviousDamage" as PreviousDamage
+object ": ReportedProblem" as ReportedProblem
+object ": CreateReport\nController" as CreateReportController
+
+Receiver -d- NewReportView : > submitClientData(ci, name, address, email, phone) \n submitVehicleData(brand, model, license,\nengineSerialNumber, seatsNumber) \n submitPreviousDamage(damageDescription) \n submitReportedProblem(problemDescription) \n setMechanic(employeeID) \n createReport()
+NewReportView -r- CreateReportController : > 1: createReport(clientData, vehicleData, \n previousDamages, problemDescriptions, mechanicID) \n 9: showResultMessage() <
+CreateReportController -u- Client : < 2: search(ci) \n 3: new( clientData) | \n set(clientID, clientData)
+CreateReportController -d- Vehicle : > 4: search(license) \n 5: new(vehicleData) | \n set(vehicleID, vehicleData)
+CreateReportController -r- Report : > 6: create(clientID, vehicleID, \n previousDamages, \nproblemDescriptions, mechanicID)
+Report -- Client
+Report -- Vehicle
+Report -r- PreviousDamage: > 7: new(previousDamage)
+Report -- ReportedProblem: > 8: new(problemDescription)
+Report -- Employee
+
+@enduml
