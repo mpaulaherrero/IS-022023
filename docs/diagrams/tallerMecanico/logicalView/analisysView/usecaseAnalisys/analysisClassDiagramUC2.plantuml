@@ -22,6 +22,8 @@ Mechanic --> ReportsView
 ReportsView --> ShowReportsController
 ShowReportsController --> Report
 
+ReportsView --> EditReportView
+
 Mechanic --> EditReportView
 EditReportView --> SetRepairsController
 SetRepairsController --> Report

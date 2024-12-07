@@ -13,13 +13,15 @@ object ": Client" as Client
 object ": Vehicle" as Vehicle
 object ": Employee" as Employee
 
-Mechanic -- ReportsView : > 1: getReports()
-ReportsView -- ShowReportsController : > 2: getReports()
+Mechanic -- ReportsView : > 1: getReports() \n 4: showReport(reportID)
+ReportsView -- ShowReportsController : > 2: getReports() \n 5: getReport(reportID)
 ShowReportsController -- Report : > 3: getData()
 
-Mechanic -- EditReportView : > 4: setRepair(reportID, date, time, \nhoursWorked, description) \n 8: setSparePart(reportID, sparePartCode)
-EditReportView -- SetRepairsController : > 5: setRepair(reportID, repairData) \n 9: setSparePart(reportID, sparePartCode) \n 7: showResult() <
-SetRepairsController -- Report : > 6: setRepair(repairData) \n 10: setSpareParte(sparePartCode)
+ReportsView -- EditReportView: > 6: showReport(reportData)
+
+Mechanic -- EditReportView : > 7: setRepair(date, time, \nhoursWorked, description) \n 11: setSparePart(sparePartCode)
+EditReportView -- SetRepairsController : > 8: setRepair(reportID, repairData) \n 12: setSparePart(reportID, sparePartCode) \n 10: showResult(message) <
+SetRepairsController -- Report : > 9: setRepair(repairData) \n 13: setSpareParte(sparePartCode)
 Report -- Repair
 Report -- SparePart
 Report -- Client
